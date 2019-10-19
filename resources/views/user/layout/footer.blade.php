@@ -12,11 +12,10 @@
                 <div class="footer_section footer_about">
                   <div class="footer_logo_container">
                     <a href="#">
-                      <div class="footer_logo_text">Unic<span>at</span></div>
+                      <div class="footer_logo_text">E-<span>Learning</span></div>
                     </a>
                   </div>
                   <div class="footer_about_text">
-                    <p>Lorem ipsum dolor sit ametium, consectetur adipiscing elit.</p>
                   </div>
                   <div class="footer_social">
                     <ul>
@@ -37,9 +36,7 @@
                   <div class="footer_title">Contact Us</div>
                   <div class="footer_contact_info">
                     <ul>
-                      <li>Email: Info.deercreative@gmail.com</li>
-                      <li>Phone:  +(88) 111 555 666</li>
-                      <li>40 Baria Sreet 133/2 New York City, United States</li>
+                      <li>Email: anhemthienlanh@gmail.com</li>
                     </ul>
                   </div>
                 </div>
@@ -53,13 +50,7 @@
                   <div class="footer_title">Contact Us</div>
                   <div class="footer_links_container">
                     <ul>
-                      <li><a href="index.html">Home</a></li>
-                      <li><a href="about.html">About</a></li>
-                      <li><a href="contact.html">Contact</a></li>
-                      <li><a href="#">Features</a></li>
-                      <li><a href="courses.html">Courses</a></li>
-                      <li><a href="#">Events</a></li>
-                      <li><a href="#">Gallery</a></li>
+                      <li><a href="{{ url('/') }}">Home</a></li>
                       <li><a href="#">FAQs</a></li>
                     </ul>
                   </div>

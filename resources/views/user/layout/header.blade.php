@@ -15,7 +15,7 @@
                   </li>
                   <li>
                     <i class="fa fa-envelope-o" aria-hidden="true"></i>
-                    <div>info.deercreative@gmail.com</div>
+                    <div>anhemthienlanh@gmail.com</div>
                   </li>
                 </ul>
                 <div class="top_bar_login ml-auto">
@@ -50,17 +50,13 @@
             <div class="header_content d-flex flex-row align-items-center justify-content-start">
               <div class="logo_container">
                 <a href="#">
-                  <div class="logo_text">Unic<span>at</span></div>
+                  <div class="logo_text">E-<span>Learning</span></div>
                 </a>
               </div>
               <nav class="main_nav_contaner ml-auto">
                 <ul class="main_nav">
-                  <li class="active"><a href="#">Home</a></li>
-                  <li><a href="about.html">About</a></li>
-                  <li><a href="courses.html">Courses</a></li>
-                  <li><a href="blog.html">Blog</a></li>
-                  <li><a href="#">Page</a></li>
-                  <li><a href="contact.html">Contact</a></li>
+                  <li class="active"><a href="{{ url('/') }}">Home</a></li>
+                  <li><p>{{ Auth::user()->name }}</p></li>
                 </ul>
                 <div class="search_button"><i class="fa fa-search" aria-hidden="true"></i></div>
 
