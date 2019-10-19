@@ -47,7 +47,6 @@ $(document).ready(function()
 	initMenu();
 	initHeaderSearch();
 	initAccordions();
-	initVideo();
 	initMilestones();
 	initPartnersSlider();
 
@@ -217,17 +216,6 @@ $(document).ready(function()
 	6. Init Video
 
 	*/
-
-	function initVideo()
-	{
-		$(".vimeo").colorbox(
-		{
-			iframe:true,
-			innerWidth:640,
-			innerHeight:409,
-			maxWidth: '90%'
-		});
-	}
 
 	/* 
 
