@@ -19,12 +19,14 @@ class CreateTeachersTable extends Migration
             $table->boolean('is_active')->default(0);
             $table->longText('cv')->nullable();
             $table->string('money')->nullable();
+            $table->string('grade')->nullable();
             $table->boolean('is_free')->nullable();
             $table->float('star')->nullable();
             $table->float('score')->nullable();
             $table->string('taught')->nullable();
             $table->string('phone')->nullable();
             $table->longText('description')->nullable();
+            $table->float('salary')->nullable();
             $table->timestamps();
         });
     }
