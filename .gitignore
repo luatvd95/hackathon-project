@@ -1,8 +1,13 @@
 /node_modules
 /public/hot
 /public/storage
+/public/js
+/public/css
+/public/fonts
+/public/plugins
 /storage/*.key
 /vendor
+.idea
 .env
 .env.backup
 .phpunit.result.cache
