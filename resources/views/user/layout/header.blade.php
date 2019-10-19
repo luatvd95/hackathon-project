@@ -19,7 +19,21 @@
                   </li>
                 </ul>
                 <div class="top_bar_login ml-auto">
-                  <div class="login_button"><a href="#">Register or Login</a></div>
+                  <div class="login_button">
+                    @if(Auth::check())
+                      <a class="dropdown-item" href="{{ route('logout') }}"
+                         onclick="event.preventDefault();
+                                       document.getElementById('logout-form').submit();">
+                          {{ __('Logout') }}
+                      </a>
+
+                      <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                          @csrf
+                      </form>
+                    @else
+                      <a href="{{ route('login') }}">Register or Login</a>
+                    @endif
+                  </div>
                 </div>
               </div>
             </div>

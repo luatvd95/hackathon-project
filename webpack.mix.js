@@ -18,4 +18,5 @@ mix.js('resources/js/app.js', 'public/js')
 	.copyDirectory('resources/plugins', 'public/plugins')
     .sass('resources/sass/app.scss', 'public/css')
     .sass('resources/sass/admin/admin-layout.scss', 'public/css/admin')
-    .sass('resources/sass/admin/icon.scss', 'public/css/admin');
+    .sass('resources/sass/admin/icon.scss', 'public/css/admin')
+    .sass('resources/sass/student-firsttime.scss', 'public/css/');
