@@ -2141,7 +2141,7 @@ h5 {
 }
 
 .cbx {
-    margin: auto;
+    /*margin: auto;*/
     -webkit-user-select: none;
     user-select: none;
     cursor: pointer;

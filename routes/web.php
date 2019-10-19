@@ -4,7 +4,7 @@ Auth::routes();
 
 // user
 Route::group(['namespace' => 'User'], function () {
-	Route::get('/', 'HomeController@index');
+	Route::get('/', 'HomeController@index')->name('home');
 	Route::get('profile/{id}', 'UserController@profile');
 	Route::post('/classes/store', 'BookingController@saveClass')->middleware('auth')->name('save.classes');
 	Route::get('/calendar', 'CalendarController@index')->name('calendar.index');

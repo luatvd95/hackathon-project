@@ -11,4 +11,9 @@ class Teacher extends Model
     protected $casts = [
         'grade' => 'json',
     ];
+
+    public function user()
+    {
+    	return $this->belongsTo('App\Models\Users','id');
+    }
 }
