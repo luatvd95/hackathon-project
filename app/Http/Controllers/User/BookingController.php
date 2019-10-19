@@ -6,7 +6,7 @@ use App\Services\ClassService;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Classes;
-use Carbon;
+use Carbon\Carbon;
 use Auth;
 
 class BookingController extends Controller
@@ -21,13 +21,15 @@ class BookingController extends Controller
 
     public function saveClass(Request $request)
     {
+        $start = $request->date . ' ' . $request->time . ':00';
     	$data = [
     		'student_id' => Auth::id(),
     		'teacher_id' => $request->teacher,
-    		'start_time' => $request->start_time,
-    		'end_time' => Carbon::parse($request->start_time)->addHour(2),
+    		'start_time' => $start,
+    		'end_time' => Carbon::parse($start)->addHour(2),
     		'status' => 0,
     		'link_call' => 'https://meet.google.com/hep-zacz-dhg',
+            'name' => 'E-learning',
     	];
 
     	$class = Classes::create($data);
