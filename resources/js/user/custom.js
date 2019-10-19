@@ -235,4 +235,8 @@ $(document).ready(function()
 		}
 	}
 
+	$('.time').click(function() {
+		$(this).toggleClass('checked');
+	});
+
 });

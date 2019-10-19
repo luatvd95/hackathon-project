@@ -2041,6 +2041,71 @@ section
     margin: 0 5px 20px 10px;
 }
 
+span.online::before {
+	content: "";
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	background: #10e810;
+    top: 2px;
+    right: -14px;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+
+a.btn.btn-sm.btn-info.mr-4 {
+    padding-right: 16px;
+}
+
+.mt--400 {
+	margin-top: -400px!important;
+}
+
+.list-date-time {
+    text-align: left;
+    font-size: 17px;
+}
+
+.date {
+    display: inline-block;
+}
+
+.time {
+    display: inline-block;
+	margin-right: 15px;
+	cursor: pointer;
+}
+
+.time-ouline-info {
+    border: 1px solid #11cdef;
+    padding: 5px 9px;
+    border-radius: 4px;
+    color: #11cdef;
+}
+
+.date-time {
+    margin-bottom: 10px;
+}
+
+.time.checked {
+	background-color: #11cdef!important;
+	color: white;
+}
+
+.mt-100 {
+	margin-top: 70px;
+}
+
+.form-control {
+	height: calc(2.2rem + 2px);
+	color: #32325d;
+}
+
+
+span.online {
+    position: relative;
+}
+
 h3.user-name {
 	margin-bottom: 15px;
 	font-weight: 100;
