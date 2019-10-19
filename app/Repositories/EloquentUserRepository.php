@@ -11,4 +11,9 @@ class EloquentUserRepository extends EloquentRepository implements UserRepositor
     {
         parent::__construct($model);
     }
+
+    public function getNameUserById($userId)
+    {
+       return $this->model->whereIn('id', $userId)->get();
+    }
 }
