@@ -37,6 +37,6 @@ class ClassService
             ];
         }
 
-        return $datas;
+        return $listClass;
     }
 }

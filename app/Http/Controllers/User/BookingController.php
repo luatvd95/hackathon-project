@@ -36,8 +36,16 @@ class BookingController extends Controller
     	return 1;
     }
 
-    public function getListClassByStudentId($studentId)
+    public function getListClassByStudentId()
     {
-        $this->classService->getListClassByStudentId($studentId);
+        $id = Auth::id();
+        if ($id) {
+            $datas = $this->classService->getListClassByStudentId($id);
+
+            return view('user.student.listBooking', compact(['datas']));
+        }
+
+        return redirect()->home();
+
     }
 }
