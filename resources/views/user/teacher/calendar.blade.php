@@ -147,7 +147,13 @@
 		        saveCalendar: {
 		            text: 'Lưu lịch',
 		            click: function() {
-	          		    window.axios.put("{{ route('calendar.update') }}", events);
+	          		    window.axios.put("{{ route('calendar.update') }}", events)
+	          		    	.then(() => {
+	          		    		window.location.href = '{{ route('calendar.index') }}';
+	          		    	})
+	          		    	.catch(() => {
+	          		    		alert('Error');
+	          		    	});
 		            }
 		        }
 		      }
