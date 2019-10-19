@@ -236,7 +236,9 @@ $(document).ready(function()
 	}
 
 	$('.time').click(function() {
+		$('.time').removeClass('checked');
 		$(this).toggleClass('checked');
+		$('#modal-default').modal();
 	});
 
 });

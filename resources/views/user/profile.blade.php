@@ -170,12 +170,43 @@
 
             <div class="pb-2 pt-2 border-top text-center">
                 <div class="btn-group">
-                    <div class="btn btn-success">Book</div>
+                    <p>Bạn có thể chọn một thời gian thích hợp với bạn!</p>
                 </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+    {{-- modal --}}
+    <div class="row">
+        <div class="col-md-4">
+            <div class="modal fade" id="modal-default" tabindex="-1" role="dialog" aria-labelledby="modal-default" aria-hidden="true">
+                <div class="modal-dialog modal- modal-dialog-centered modal-" role="document">
+                    <div class="modal-content">
+                        <form action="">
+                            <div class="modal-header">
+                                <h6 class="modal-title" id="modal-title-default">Book giáo viên</h6>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">×</span>
+                                </button>
+                            </div>
+                            <input type="hidden" name="teacher" value="">
+                            <input type="hidden" name="date">
+                            <input type="hidden" name="time">
+                            <div class="modal-body">
+                                Bạn có chấp nhận giáo viên: Nguyen Danh Loi với giá ... ?
+                                Với số tiền ...?
+                            </div>
+                
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary">Chấp nhận</button>
+                                <button type="button" class="btn btn-link  ml-auto" data-dismiss="modal">Hủy</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </main>
 @endsection
