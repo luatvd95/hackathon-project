@@ -124,9 +124,9 @@
                             @foreach($teachers as $key => $teacher)
                             <div class="col-lg-4 col-md-6 team_col">
                                 <div class="team_item">
-                                    <div class="team_image"><img src="{{ asset('images/' . $teacher->taught) }}" alt=""></div>
+                                    <div class="team_image"><img src="{{ asset('images/' . $teacher->user->avatar) }}" alt=""></div>
                                     <div class="team_body">
-                                        <div class="team_title"><a href="#">{{ $teacher->cv }}</a></div>
+                                        <div class="team_title"><a href="#">{{ $teacher->user->name }}</a></div>
                                         <div class="team_subtitle">{{ $teacher->phone }}</div>
                                         <div class="social_list">
                                             <ul>
