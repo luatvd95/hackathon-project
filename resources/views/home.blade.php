@@ -122,8 +122,8 @@
             <div class="row">
                 <div class="col">
                     <div class="section_title_container text-center">
-                        <h2 class="section_title">Welcome To Unicat E-Learning</h2>
-                        <div class="section_subtitle"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel gravida arcu. Vestibulum feugiat, sapien ultrices fermentum congue, quam velit venenatis sem</p></div>
+                        <h2 class="section_title">Welcome To E-Learning</h2>
+                        <div class="section_subtitle"><p>Hệ thống giáo dục chất lượng hàng đầu</p></div>
                     </div>
                 </div>
             </div>
@@ -134,9 +134,9 @@
         <div class="row">
             <div class="col-sm-2">
                 <div id="filter">
-                    //filter
+                    <!-- //filter -->
                     <div class="list-todo">
-                        <h5 class="filter-by">Loc theo cap hoc</h5>
+                        <h5 class="filter-by">Lọc theo cấp học</h5>
                         <div >
                             <div class="item todo-item">
                                 <div class="form-check form-check-inline">
@@ -147,7 +147,7 @@
                                                 <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
                                             </svg>
                                         </span>
-                                        <span>cap 1</span>
+                                        <span>Cấp 1</span>
                                     </label>
                                 </div>
                             </div>
@@ -160,7 +160,7 @@
                                                 <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
                                             </svg>
                                         </span>
-                                        <span>cap 2</span>
+                                        <span>Cấp 2</span>
                                     </label>
                                 </div>
                             </div>
@@ -173,14 +173,14 @@
                                                 <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
                                             </svg>
                                         </span>
-                                        <span>cap 3</span>
+                                        <span>Cấp 3</span>
                                     </label>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="list-todo">
-                        <h5 class="filter-by">Loc theo mon hoc</h5>
+                        <h5 class="filter-by">Lọc theo môn học</h5>
                         <div >
                             <div class="item todo-item">
                                 <div class="form-check form-check-inline">
@@ -242,7 +242,7 @@
                             <!-- Team Item -->
                             <div class="col-lg-4 col-md-6 team_col">
                                 <div class="team_item">
-                                    <div class="team_image"><img src="images/team_1.jpg" alt=""></div>
+                                    <div class="team_image"><img src="{{ asset(config('asset.avatar')) }}" alt=""></div>
                                     <div class="team_body">
                                         <div class="team_title"><a href="#">Jacke Masito</a></div>
                                         <div class="team_subtitle">Marketing & Management</div>
@@ -260,7 +260,7 @@
                             <!-- Team Item -->
                             <div class="col-lg-4 col-md-6 team_col">
                                 <div class="team_item">
-                                    <div class="team_image"><img src="images/team_2.jpg" alt=""></div>
+                                    <div class="team_image"><img src="{{ asset(config('asset.avatar')) }}" alt=""></div>
                                     <div class="team_body">
                                         <div class="team_title"><a href="#">William James</a></div>
                                         <div class="team_subtitle">Designer & Website</div>
@@ -278,7 +278,7 @@
                             <!-- Team Item -->
                             <div class="col-lg-4 col-md-6 team_col">
                                 <div class="team_item">
-                                    <div class="team_image"><img src="images/team_3.jpg" alt=""></div>
+                                    <div class="team_image"><img src="{{ asset(config('asset.avatar')) }}" alt=""></div>
                                     <div class="team_body">
                                         <div class="team_title"><a href="#">John Tyler</a></div>
                                         <div class="team_subtitle">Quantum mechanics</div>
@@ -312,7 +312,7 @@
                             <!-- Team Item -->
                             <div class="col-lg-4 col-md-6 team_col">
                                 <div class="team_item">
-                                    <div class="team_image"><img src="images/team_1.jpg" alt=""></div>
+                                    <div class="team_image"><img src="{{ asset(config('asset.avatar')) }}" alt=""></div>
                                     <div class="team_body">
                                         <div class="team_title"><a href="#">Jacke Masito</a></div>
                                         <div class="team_subtitle">Marketing & Management</div>
@@ -330,7 +330,7 @@
                             <!-- Team Item -->
                             <div class="col-lg-4 col-md-6 team_col">
                                 <div class="team_item">
-                                    <div class="team_image"><img src="images/team_2.jpg" alt=""></div>
+                                    <div class="team_image"><img src="{{ asset(config('asset.avatar')) }}" alt=""></div>
                                     <div class="team_body">
                                         <div class="team_title"><a href="#">William James</a></div>
                                         <div class="team_subtitle">Designer & Website</div>
@@ -348,7 +348,7 @@
                             <!-- Team Item -->
                             <div class="col-lg-4 col-md-6 team_col">
                                 <div class="team_item">
-                                    <div class="team_image"><img src="images/team_3.jpg" alt=""></div>
+                                    <div class="team_image"><img src="{{ asset(config('asset.avatar')) }}" alt=""></div>
                                     <div class="team_body">
                                         <div class="team_title"><a href="#">John Tyler</a></div>
                                         <div class="team_subtitle">Quantum mechanics</div>
@@ -368,12 +368,40 @@
                 </div>
             </div>
             <div class="col-sm-3">
+                <!-- detail -->
                 <div id="detail-user">
                     <div id="notification">
-                        Lớp học của bạn sẽ diễn ra trong 15:00
+                        <h5 class="text-center">Lớp học của bạn sẽ diễn ra trong 15:00</h5>
                     </div>
                     <div id="profile">
-                        proflie user
+                        <!-- proflie user -->
+                        <div class="user-info">
+                            <div class="avatar">
+                                <img src="{{ asset(config('asset.avatar')) }}" alt="">
+                            </div>
+                            <h3 class="user-name">Nguyễn Danh Lợi</h5>
+                            <div class="user-star">
+                                <div class="score">
+                                    <span>8.8</span>
+                                </div>
+                                <div class="star-list">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                                <span>(15)</span>
+                            </div>
+                            <div class="user-detail">
+                                <p>0984.282.942</p>
+                                <p>Địa chỉ: Mỹ Đình, Từ Liêm, Hà Nội</p>
+                                <p>Email: danhloimta@gmail.com</p>
+                                <p>Birthday: 18/06/1996</p>
+                                <p>Giới tính: Nam</p>
+                                <p>Kinh nghiệm: 4 năm</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
