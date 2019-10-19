@@ -10,7 +10,7 @@ Route::group(['namespace' => 'User'], function () {
 	Route::get('/calendar', 'CalendarController@index')->name('calendar.index');
 	Route::put('/calendar', 'CalendarController@update')->name('calendar.update');
 //	Route::get('profile/{id}', 'UserController@profile');
-	Route::get('class/student/{id}', 'BookingController@getListClassByStudentId');
+	Route::get('class/student', 'BookingController@getListClassByStudentId');
 });
 
 //Admin

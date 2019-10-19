@@ -14,7 +14,6 @@ class HomeController extends Controller
 {
     public function index(Request $request)
     {
-
     	$request = $request->all();
     	$teachers = Teacher::orderBy('id','ASC');
     	if (isset($request['grades'])) {
@@ -37,6 +36,5 @@ class HomeController extends Controller
     	$teachers = $teachers->paginate(10);
 
     	return view('home', compact('grades','subjects','teachers','request'));
-
     }
 }

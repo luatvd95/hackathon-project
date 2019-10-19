@@ -1,47 +1,4 @@
 <header class="header">
-      
-    <!-- Top Bar -->
-    <div class="top_bar">
-      <div class="top_bar_container">
-        <div class="container">
-          <div class="row">
-            <div class="col">
-              <div class="top_bar_content d-flex flex-row align-items-center justify-content-start">
-                <ul class="top_bar_contact_list">
-                  <li><div class="question">Have any questions?</div></li>
-                  <li>
-                    <i class="fa fa-phone" aria-hidden="true"></i>
-                    <div>001-1234-88888</div>
-                  </li>
-                  <li>
-                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
-                    <div>anhemthienlanh@gmail.com</div>
-                  </li>
-                </ul>
-                <div class="top_bar_login ml-auto">
-                  <div class="login_button">
-                    @if(Auth::check())
-                      <a class="dropdown-item" href="{{ route('logout') }}"
-                         onclick="event.preventDefault();
-                                       document.getElementById('logout-form').submit();">
-                          {{ __('Logout') }}
-                      </a>
-
-                      <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                          @csrf
-                      </form>
-                    @else
-                      <a href="{{ route('login') }}">Register or Login</a>
-                    @endif
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>        
-    </div>
-
     <!-- Header Content -->
     <div class="header_container">
       <div class="container">
@@ -64,7 +21,21 @@
 
                 <!-- Hamburger -->
 
-                <div class="shopping_cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></div>
+                <div class="shopping_cart">
+                  @if(Auth::check())
+                    <a class="dropdown-item" href="{{ route('logout') }}"
+                      onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();">
+                        {{ __('Logout') }}
+                    </a>
+
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
+                  @else
+                    <a href="{{ route('login') }}">Register or Login</a>
+                  @endif
+                </div>
                 <div class="hamburger menu_mm">
                   <i class="fa fa-bars menu_mm" aria-hidden="true"></i>
                 </div>
