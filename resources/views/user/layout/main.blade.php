@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>E-Learning</title>
+<title>@yield('title', 'E-Learning')</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="E-Learning project">
@@ -12,6 +12,9 @@
 <link rel="stylesheet" type="text/css" href="{{ asset('plugins/OwlCarousel2-2.2.1/owl.theme.default.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('plugins/OwlCarousel2-2.2.1/animate.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('css/user/all.css') }}">
+
+@yield('css')
+
 </head>
 
 <body>
@@ -34,5 +37,6 @@
   <script src="{{ asset('plugins/OwlCarousel2-2.2.1/owl.carousel.js') }}"></script>
   <script src="{{ asset('plugins/easing/easing.js') }}"></script>
   <script src="{{ asset('plugins/parallax-js-master/parallax.min.js') }}"></script>
+  @yield('js')
 </body>
 </html>
