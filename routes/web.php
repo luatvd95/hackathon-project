@@ -5,6 +5,7 @@ Auth::routes();
 // user
 Route::group(['namespace' => 'User'], function () {
 	Route::get('/', 'HomeController@index');
+	Route::get('profile/{id}', 'UserController@profile');
 });
 
 //Admin
