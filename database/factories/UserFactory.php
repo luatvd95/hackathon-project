@@ -17,11 +17,14 @@ use Faker\Generator as Faker;
 */
 
 $factory->define(User::class, function (Faker $faker) {
+	$roles = array('teacher','student','admin');
+	$avatar = array('1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg');
     return [
         'name' => $faker->name,
         'email' => $faker->unique()->safeEmail,
         'password' => bcrypt('123456'),
-        'role' => rand(1, 3),
+        'role' => array_random($roles),
+        'avatar' => array_random($avatar),
         'remember_token' => Str::random(10),
     ];
 });

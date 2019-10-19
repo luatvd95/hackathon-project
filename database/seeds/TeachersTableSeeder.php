@@ -13,7 +13,6 @@ class TeachersTableSeeder extends Seeder
     {
         $json = File::get('database/data/teachers.json');
         $datas = json_decode($json);
-
         foreach ($datas as $data) {
             \App\Models\Teacher::create([
                 'user_id' => $data->user_id,
