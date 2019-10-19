@@ -10,7 +10,7 @@ Route::group(['namespace' => 'User'], function () {
 });
 
 //Admin
-Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => ['auth']], function () {
+Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => ['auth', 'check.admin']], function () {
 	Route::get('/', 'AdminController@index');
 });
 
