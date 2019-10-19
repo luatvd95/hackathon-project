@@ -33,11 +33,20 @@ class BookingController extends Controller
     	];
 
     	$class = Classes::create($data);
-    	return 1;
+
+    	return redirect('/class/student');
     }
 
-    public function getListClassByStudentId($studentId)
+    public function getListClassByStudentId()
     {
-        $this->classService->getListClassByStudentId($studentId);
+        $id = Auth::id();
+        if ($id) {
+            $datas = $this->classService->getListClassByStudentId($id);
+
+            return view('user.student.listBooking', compact(['datas']));
+        }
+
+        return redirect()->home();
+
     }
 }
