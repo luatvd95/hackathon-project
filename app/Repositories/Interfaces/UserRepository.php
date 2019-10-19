@@ -7,5 +7,5 @@ use App\Repositories\Interfaces\Repository;
 
 interface UserRepository extends Repository
 {
-    //
+    public function getNameUserById($userId);
 }
