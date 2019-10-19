@@ -56,7 +56,9 @@
               <nav class="main_nav_contaner ml-auto">
                 <ul class="main_nav">
                   <li class="active"><a href="{{ url('/') }}">Home</a></li>
-                  <li><p>{{ Auth::user()->name }}</p></li>
+                  @if(Auth::check())
+                    <li><p>{{ Auth::user()->name }}</p></li>
+                  @endif
                 </ul>
                 <div class="search_button"><i class="fa fa-search" aria-hidden="true"></i></div>
 
