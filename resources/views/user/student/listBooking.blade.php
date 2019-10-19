@@ -16,117 +16,56 @@
                             <table class="table">
                                 <thead class=" text-primary">
                                 <th>
-                                    Name
+                                    Môn học
                                 </th>
                                 <th>
-                                    Country
+                                    Giáo viên
                                 </th>
                                 <th>
-                                    City
+                                    Thời gian bắt đầu
                                 </th>
-                                <th class="text-right">
-                                    Salary
+                                <th>
+                                    Thời gian kết thúc
                                 </th>
+                                <th>
+                                    Trạng thái
+                                </th>
+                                <th class="text-right"></th>
                                 </thead>
                                 <tbody>
+                                @foreach($datas as $data)
                                 <tr>
                                     <td>
-                                        Dakota Rice
+                                        {{ $data['name'] }}
                                     </td>
                                     <td>
-                                        Niger
+                                        {{ $data['teacher_name'] }}
                                     </td>
                                     <td>
-                                        Oud-Turnhout
+                                       {{ $data['start_time'] }}
+                                    </td>
+                                    <td>
+                                       {{ $data['end_time'] }}
+                                    </td>
+                                    <td>
+                                        @if($data['status'] == 'Open')
+                                            <span class="badge badge-pill badge-success">
+                                        @elseif($data['status'] == 'Learning')
+                                            <span class="badge badge-pill badge-primary">
+                                        @elseif($data['status'] == 'Close')
+                                            <span class="badge badge-pill badge-danger">
+                                        @endif
+                                        {{ $data['status'] }}</span>
                                     </td>
                                     <td class="text-right">
-                                        $36,738
+                                        @if($data['status'] == 'Close')
+                                            <span href="{{ $data['link_call'] }}" target="_blank" class="btn btn-sm btn-info" disabled="disabled">Join</span>
+                                        @else
+                                            <a href="{{ $data['link_call'] }}" target="_blank" class="btn btn-sm btn-info" disabled="disabled">Join</a>
+                                        @endif
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td>
-                                        Minerva Hooper
-                                    </td>
-                                    <td>
-                                        Curaçao
-                                    </td>
-                                    <td>
-                                        Sinaai-Waas
-                                    </td>
-                                    <td class="text-right">
-                                        $23,789
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Sage Rodriguez
-                                    </td>
-                                    <td>
-                                        Netherlands
-                                    </td>
-                                    <td>
-                                        Baileux
-                                    </td>
-                                    <td class="text-right">
-                                        $56,142
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Philip Chaney
-                                    </td>
-                                    <td>
-                                        Korea, South
-                                    </td>
-                                    <td>
-                                        Overland Park
-                                    </td>
-                                    <td class="text-right">
-                                        $38,735
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Doris Greene
-                                    </td>
-                                    <td>
-                                        Malawi
-                                    </td>
-                                    <td>
-                                        Feldkirchen in Kärnten
-                                    </td>
-                                    <td class="text-right">
-                                        $63,542
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Mason Porter
-                                    </td>
-                                    <td>
-                                        Chile
-                                    </td>
-                                    <td>
-                                        Gloucester
-                                    </td>
-                                    <td class="text-right">
-                                        $78,615
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Jon Porter
-                                    </td>
-                                    <td>
-                                        Portugal
-                                    </td>
-                                    <td>
-                                        Gloucester
-                                    </td>
-                                    <td class="text-right">
-                                        $98,615
-                                    </td>
-                                </tr>
+                                @endforeach
                                 </tbody>
                             </table>
                         </div>

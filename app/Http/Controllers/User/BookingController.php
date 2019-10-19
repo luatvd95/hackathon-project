@@ -33,7 +33,8 @@ class BookingController extends Controller
     	];
 
     	$class = Classes::create($data);
-    	return 1;
+
+    	return redirect('/class/student');
     }
 
     public function getListClassByStudentId()
