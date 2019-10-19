@@ -6,6 +6,7 @@ Auth::routes();
 Route::group(['namespace' => 'User'], function () {
 	Route::get('/', 'HomeController@index');
 	Route::get('profile/{id}', 'UserController@profile');
+	Route::post('/classes/store', 'BookingController@saveClass')->middleware('auth')->name('save.classes');
 });
 
 //Admin
